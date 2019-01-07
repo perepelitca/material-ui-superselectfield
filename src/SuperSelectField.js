@@ -38,8 +38,8 @@ export default class SelectField extends Component {
 
   static defaultProps = selectFieldDefaultProps;
 
-  // eslint-disable-next-line camelcase
-  UNSAFE_componentWillReceiveProps (nextProps) {
+  // eslint-disable-next-line
+  componentWillReceiveProps (nextProps) {
     if (!areEqual(nextProps.value, this.state.selectedItems)) {
       this.setState({ selectedItems: nextProps.value });
     }
